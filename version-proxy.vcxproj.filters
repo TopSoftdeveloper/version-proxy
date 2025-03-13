@@ -13,6 +13,12 @@
     <ClCompile Include="src\version.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\XHideDll.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\Utils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\version.def">
@@ -21,6 +27,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\version.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\XHideDll.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\Utils.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\ntdll\ntdll.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

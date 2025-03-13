@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\Utils.cpp" />
+    <ClCompile Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\XHideDll.cpp" />
     <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="src\version.cpp" />
   </ItemGroup>
@@ -26,6 +28,9 @@
     <None Include="src\version.def" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\ntdll\ntdll.h" />
+    <ClInclude Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\Utils.h" />
+    <ClInclude Include="..\..\..\%40KProjects\K_VersionProxy\version-proxy\src\XHideDll.h" />
     <ClInclude Include="src\version.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -121,13 +126,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;VERSIONPROXY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;VERSIONPROXY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -136,6 +142,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>src/version.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -164,13 +171,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;VERSIONPROXY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;VERSIONPROXY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -179,6 +187,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>src/version.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
